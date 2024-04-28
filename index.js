@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://ishansangani:Ishan123<password>@cluster0.naowgnd.mongodb.net/')
+mongoose.connect('mongodb+srv://ishansangani:Ishan123@cluster0.naowgnd.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
