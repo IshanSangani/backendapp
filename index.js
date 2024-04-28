@@ -6,9 +6,10 @@ const bcrypt = require('bcrypt');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://ishansangani:Ishan123@cluster0.naowgnd.mongodb.net/lawappusers', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/your_database_name')
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
+
 
 // User Schema
 const UserSchema = new mongoose.Schema({
